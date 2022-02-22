@@ -1,0 +1,96 @@
+Compiler assignment 1
+Akhond Sarah Mesbah 041009466
+General Specification
+Name: IVA
+IVA is an object oriented programming which is somewhat similar to Java not completely though.   An IVA program is a single file program. Its extension is going to be .iva and this is the the only extension that  we be used for this programming language. Even though it lacks complex data types , this language would be great for beginner level programmers or anyone who wants to try coding for the first time due to the language being uncomplicated 
+The format of an IVA program is
+ 
+**MAIN Program**
+** The main function in this language is called IVA **
+IVA{
+**any variables or constants**
+OUTPUT{“Hello World”};
+}
+
+User Manual
+Element 0:
+Comments: The program supports both single-line type and multiple-line type comments. For single-line comments it can just begin with double asterisk (**) and nothing to add the comment but for multiple-line comments we can start the comment with triple asterisks(***) and end it with triple asterisks as well.
+Keywords: Keywords(which cant be used as identifiers) that can be used in this language is Integer, Float and String, IF, THEN,WHILE
+Element 1
+This language can compute tasks involving numbers (integer and float-point numbers) and strings. It can work with whole numbers which are the integers as well as numbers with decimal numbers which are the float-point numbers as variables, both in constants as well as variables. The memory size for the intergers numbers can be 2 or 4 bytes so the range of values can be from -32,768 to 32,767 or -2,147,483,648 to 2,147,483,647 as for float- point numbers the memory size is 4 bytes and the range of values is 1.2E-38 to 3.4E+38. Both the number variables and constants can be be positive, negative or zero numbers. As for the string variables which is used to compute tasks involving texts the memory size is 1 byte and the range can be from -128 to 127 or 0 to 255.
+This language is to be able to process inputs both as variables and as constants.
+Element 2
+Assignment
+The names of variables whether it be integer, Float-point numbers or string are made up of ASCII letters, digits or underscore (_).
+Variables such as strings start and end with the symbol @
+Variables such as the integers start and end with the symbol %
+Variables such as the float-point number start and end with the symbol &
+Any other starting without any of these symbols(@,% or &) will not be considered as variables.
+As for constants:
+All the ocnstants no mateer string, integer , float-point number will be enclosed in single quotations.
+A constant which is an integer is string of ASCII digits which are not empty. Decimal integer constants written in base 10 are only supported.
+Examples of allowed integer constants: 0 ,00, -2,147,483,647, 1432
+2,147,483,648 can be a legal decimal number representation but it is illegal as a value for integer constants as it is out of range
+A constant which is a floating-point constant comprises of digits having a (.) in between the digits. The format must be always so that there should be a string of digits which are not null followed by a (.) and another string of digits. The first string should always be a legal decimal constant. 
+Examples of floating-point constant representations are 005.0, 875.000, 16.35.
+Examples of illegal floating-point constant: 34., .34567.
+A string constant is a limited amount of ASCII characters enclosed in single quotations(‘).Empty strings are allowed, (that is, ‘’is a permitted string constant).
+Declaration of data as such are allowed in thins language:
+Integer %varname1%, %varname2% etc…
+String @varname1@,@varname2@ etc…
+Float &varname1&, &varname2& etc…
+
+Arithmetic operations such as addition(+), subtraction(-), multiplication(*) and division(/) can be done.
+Example:
+%sum% = 0.0;
+%first% = -1.0;
+%second% = -(1.2 + 3.0);
+@third@= 7; 
+@fourth@ = 04;
+%sum% = %first% + %second%  -(@third@ +@fourth@);
+Concatenation of strings whether it be string variables or constants can be done using the symbol ^^
+Example:
+@light@= ‘sun’;
+@day@= “Let the “^^@light@^^“shines!”;
+ @day@ would contain “Let the sun shines!” 
+Selection Statement: 
+IF condition that needs to be met (Condition) 
+BEGIN {
+ declarations (there can or not be any declarations at all) 
+} ELSE { 
+declarations (there can or not be any declaratiosn at all) 
+}; 
+If the condition(in the brackets) turn to be true and the condition that needs to be met  is the actual word true, the declaration contained in the BEGIN clause are implemented and the implementation of the program resumes with the declaration following the selection statement (BEGIN). If the Condition evaluates to false, only the declaration which is present in the ELSE block are implemented and the implementation of program resumes with the declaration following the selection statement (ELSE).
+Iteration Statement:
+WHILE condition to be met (Condition) 
+REPLICATE
+ {
+ declaration
+}; The Iteration Statement continually implements the declarations present in the REPLICATE clause of the WHILE loop depending on the condition to be met and Condition. If the condition to be met is the actual word true and the Condition turns out to be false, the declarations in the REPLICATE clauses are not implemented at all but if the condition turns out to be true the declarations in the REPLICATE clause will repeat itself until the condition turns out to be False.
+Conditional Expression is a stamen that associates the right side of the expression to the left side of the expression. They are usually made up of relational expressions and the logical operators which is in this languages are *AND* , *OR*,*NOT*.The order of precedence goes from*NOT*,*AND* and then *OR*.Brackets around these operators are not allowed . The Conditional Expression calculates to true or false. The principles of true and false are execution dependent. 
+Relational expressions are those which assess two or more values against each other. The outcome will either be TRUE or FALSE. These expressions are usually constructed from variables of similar types and comparison operators ==,< and >.they have higher precedence than logical operators.
+Example:
+WHILE(&due&>0.0 *AND* &answer& ==”y”)
+DO{%balance%= %balance% –%debi%t;}
+Input/Output Statements:
+INPUT(variable options);
+Variable options is one or more variables separated with a comma.
+The INPUT declaration collects information from the input and sends them to the variables in the variable options in the same order they are listed in the variable option.
+Example:
+INPUT(&a&,%b%,@c@);
+OUTPUT (variable option);
+OUTPUT (string);
+The OUTPUT statement sends the string or the data of the variable in the options of variables to the  output.
+Example:
+OUTPUT(“My name is iva”);
+Output(@name@); 
+Element 3:
+Functions can are created by only typing the name of the function , no specifiers needed before the functions. The functions in this language don’t need a return a type but can contain parameters. We will follow the same format needed when declaring data for instance.
+For example: myClass(#varnem1#,%varaname2%,&varname3&){}
+General view:
+ As stated before since we are going to integers, string and float-point number we will be using integers , float numbers chars instead. In order to identify the elements for the output whatever that is put in the clause in OUTPUT will be detected as an output. In order to identify constants any constants with single quotations surrounding it will be regarded as constants. In case of iterations and conditionals as well functions anything enclosed in {} will be a scope for the codes in the program.
+Challenges and solutions to it: As it is a very simple language, I have yet to encounter any challenges as of such but as I proceed forward I might encounter rpoblems and dela with them accordingly
+
+
+
+
